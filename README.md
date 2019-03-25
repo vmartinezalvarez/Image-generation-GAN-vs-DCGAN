@@ -10,7 +10,7 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 <td> DCGAN</td>
 </tr>
 <tr>
-<td><img src = 'MNIST_GAN_results/generation_animation.gif'>
+<td><img src = 'MNIST_GAN_images/generation_animation.gif'>
 <td><img src = 'MNIST_DCGAN_results/MNIST_DCGAN_generation_animation.gif'>
 </tr>
 </table>
@@ -24,7 +24,7 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 <td> DCGAN agter 20 epochs </td>
 </tr>
 <tr>
-<td><img src = 'MNIST_GAN_results/raw_MNIST.png'>
+<td><img src = 'MNIST_GAN_results/gan.gif.png'>
 <td><img src = 'MNIST_GAN_results/MNIST_GAN_100.png'>
 <td><img src = 'MNIST_DCGAN_results/MNIST_DCGAN_20.png'>
 </tr>
