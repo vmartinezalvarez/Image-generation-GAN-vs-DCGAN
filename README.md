@@ -28,9 +28,6 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 </tr>
 </table>
 
-* Training loss
-  * GAN
-
 
 * Learning time
     * MNIST GAN - CPU times: user 12min 58s, sys: 2min 21s, total: 15min 19s. Wall time: 15min 8s
