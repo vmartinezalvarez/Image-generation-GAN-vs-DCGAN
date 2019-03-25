@@ -31,7 +31,7 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 
 * Learning time
     * MNIST GAN - CPU times: user 12min 58s, sys: 2min 21s, total: 15min 19s. Wall time: 15min 8s
-    * MNIST DCGAN - Avg. per epoch: 175.84 sec; Total 20 epochs: 3619.97 sec
+    * MNIST DCGAN - Avg. time for epoch is 26.319965600967407 sec
 
 
 ## Reference
