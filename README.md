@@ -33,10 +33,9 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 * Training loss
   * GAN
 
-![Loss](MNIST_GAN_results/MNIST_GAN_train_hist.png)
 
 * Learning time
-    * MNIST GAN - Avg. per epoch: 4.97 sec; Total 100 epochs: 1255.92 sec
+    * MNIST GAN - CPU times: user 12min 58s, sys: 2min 21s, total: 15min 19s. Wall time: 15min 8s
     * MNIST DCGAN - Avg. per epoch: 175.84 sec; Total 20 epochs: 3619.97 sec
 
 
@@ -44,10 +43,10 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 
 [1] Goodfellow, Ian, et al. "Generative adversarial nets." Advances in neural information processing systems. 2014.
 
-(Full paper: http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
+(Paper: http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
 
 [2] Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015).
 
-(Full paper: https://arxiv.org/pdf/1511.06434.pdf)
+(Paper: https://arxiv.org/pdf/1511.06434.pdf)
 
-[3] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
+[3] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, Nov 1998.
