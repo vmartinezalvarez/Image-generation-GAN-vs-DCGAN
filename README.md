@@ -20,7 +20,7 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 <table align='center'>
 <tr align='center'>
 <td> GAN after 200 epochs </td>
-<td> DCGAN agter 20 epochs </td>
+<td> DCGAN after 100 epochs </td>
 </tr>
 <tr>
 <td><img src = 'MNIST_GAN_images/image_at_epoch_0200.png'>
