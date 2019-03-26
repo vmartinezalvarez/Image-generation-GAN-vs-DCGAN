@@ -11,7 +11,7 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 </tr>
 <tr>
 <td><img src = 'MNIST_GAN_images/gan.gif.png'>
-<td><img src = 'MNIST_DCGAN_results/MNIST_DCGAN_generation_animation.gif'>
+<td><img src = 'MNIST_DCGAN_images/dcgan.gif.png'>
 </tr>
 </table>
 
