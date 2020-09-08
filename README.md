@@ -2,7 +2,7 @@
 
 TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] dataset.
 
-## 
+## Abstract
 
 Recently, the search for creative artificial intelligence has turned to generative adversarial network (GAN), which is currently one of the most popular and successful application of deep learning. Motivated by the ability of GANs to sampling
 from a latent space of images to create entirely new images, here we evaluate and compare the
