@@ -1,9 +1,13 @@
+#  Image Generation: GAN vs DCGAN on MNIST and notMNIST datasets
 ![Center Image](gan.webp)
 
 
-# MNIST Image Generation:  GAN vs DCGAN
+TensorFlow implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] and [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html) datasets.
 
-TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] dataset.
+## notMNIST dataset
+The [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html) dataset is similar to MNIST, but looks a bit more like real data, that is, the data is much less clean compared to MNIST. There are 10 classes, with letters A-J taken from different fonts. 
+
+The dataset consists of a small part cleaned by hand, approximately 1872 elements per class, and large uncleaned part, approximately 52909 elements per class. Two parts have approximately 0.5% and 6.5% label error rate.
 
 ## Abstract
 
