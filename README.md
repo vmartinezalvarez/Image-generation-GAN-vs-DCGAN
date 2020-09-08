@@ -45,7 +45,13 @@ a fake image and 1 indicates a real image.</figcaption>
 
 
 
-
+![Center Image](fig1.png)
+<tr align='center'>
+<td> GAN</td>
+</tr>
+<tr>
+<td><img src = 'fig1.png'>
+</tr>
 
 
 
