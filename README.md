@@ -9,6 +9,28 @@ from a latent space of images to create entirely new images, here we evaluate an
 performance of a GAN, where both generator and discriminator are multilayer perceptrons with a
 deep convolutional generative adversarial network (DCGAN) on the MNIST dataset.
 
+## Introduction
+
+Sampling from a latent space of images to produce entirely new images is currently one of the most prominent and
+successful application of creative artificial intelligence. In this context, generative adversarial networks (or GANs
+for short) (Goodfellow et al., 2014), first introduced in 2014, have exploded in popularity as an alternative to variational autoencoders (VAEs) for learning latent spaces of images. They have been used in real-life applications for
+text/image/video generation, drug discovery and text-toimage synthesis.
+
+GANs are a kind of generative model that allows us to generate a whole image in parallel, in contrast with recurrent
+networks where the model generates the image one pixel at a time. Along with several other kinds of generative models,
+GANs use a differentiable function represented by a neural network as a generator G network. The generator network
+takes random noise as input, then runs that noise through a differentiable function to transform the noise and reshape it
+to have recognizable structure. The output of the generator is a realistic image. The choice of the random input noise
+determines which image will come out of the generator network. Running the generator with many different input
+noise values produces many different realistic output images.
+
+The goal is for these images to be as fair samples from the distribution over real data. Of course, the generator net
+doesn’t start out producing realistic images. It has to be trained. The training process for a generative model is very
+different from the training process for a supervised learning model. For a supervised learning model, we show the model
+an image of an object and we tell it, this is the label. For a generative model, there is no output to associate with each
+image. We just show the model a lot of images and ask it to make more images that come from the same probability
+distribution.
+
 ## Results
 
 <table align='center'>
