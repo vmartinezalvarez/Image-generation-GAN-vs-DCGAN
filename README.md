@@ -73,13 +73,8 @@ Also, we used the [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dat
  
  ##
  
-<table align='center'>
-<tr align='center'>
-</tr>
-<tr>
-<td><img src = 'NotMNIST.png'>
-</tr>
-</table>
+![image](https://drive.google.com/uc?export=view&id=1QkL7ZdPe_hwyrV4pLZE1mGhW3Kxb-8Oz)
+
 
 ## Conclusions
 
