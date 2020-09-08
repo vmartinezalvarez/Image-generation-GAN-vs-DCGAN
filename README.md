@@ -1,3 +1,6 @@
+![Center Image](images/fig1.jpg)
+
+
 # MNIST Image Generation:  GAN vs DCGAN
 
 TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] dataset.
