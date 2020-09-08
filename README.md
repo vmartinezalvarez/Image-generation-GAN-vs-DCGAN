@@ -7,46 +7,25 @@ TensorFlow 2.0 implementation of Generative Adversarial Networks (GAN) [1] and D
 
 ## Abstract
 
-Recently, the search for creative artificial intelligence has turned to generative adversarial network (GAN), which is currently one of the most popular and successful application of deep learning. Motivated by the ability of GANs to sampling
-from a latent space of images to create entirely new images, here we evaluate and compare the
-performance of a GAN, where both generator and discriminator are multilayer perceptrons with a
-deep convolutional generative adversarial network (DCGAN) on the MNIST dataset.
+Recently, the search for creative artificial intelligence has turned to generative adversarial network (GAN), which is currently one of the most popular and successful application of deep learning. Motivated by the ability of GANs to sampling from a latent space of images to create entirely new images, here we evaluate and compare the performance of a GAN, where both generator and discriminator are multilayer perceptrons with a deep convolutional generative adversarial network (DCGAN) on the MNIST dataset.
 
 ## Introduction
 
-Sampling from a latent space of images to produce entirely new images is currently one of the most prominent and
-successful application of creative artificial intelligence. In this context, generative adversarial networks (or GANs
-for short) (Goodfellow et al., 2014), first introduced in 2014, have exploded in popularity as an alternative to variational autoencoders (VAEs) for learning latent spaces of images. They have been used in real-life applications for
-text/image/video generation, drug discovery and text-toimage synthesis.
+Sampling from a latent space of images to produce entirely new images is currently one of the most prominent and successful application of creative artificial intelligence. In this context, generative adversarial networks (or GANs for short) (Goodfellow et al., 2014), first introduced in 2014, have exploded in popularity as an alternative to variational autoencoders (VAEs) for learning latent spaces of images. They have been used in real-life applications for text/image/video generation, drug discovery and text-toimage synthesis.
 
-GANs are a kind of generative model that allows us to generate a whole image in parallel, in contrast with recurrent
-networks where the model generates the image one pixel at a time. Along with several other kinds of generative models,
-GANs use a differentiable function represented by a neural network as a generator G network. The generator network
-takes random noise as input, then runs that noise through a differentiable function to transform the noise and reshape it
-to have recognizable structure. The output of the generator is a realistic image. The choice of the random input noise
-determines which image will come out of the generator network. Running the generator with many different input
-noise values produces many different realistic output images.
+GANs are a kind of generative model that allows us to generate a whole image in parallel, in contrast with recurrent networks where the model generates the image one pixel at a time. Along with several other kinds of generative models, GANs use a differentiable function represented by a neural network as a generator G network. The generator network takes random noise as input, then runs that noise through a differentiable function to transform the noise and reshape it to have recognizable structure. The output of the generator is a realistic image. The choice of the random input noise determines which image will come out of the generator network. Running the generator with many different input noise values produces many different realistic output images.
 
-The goal is for these images to be as fair samples from the distribution over real data. Of course, the generator net
-doesn’t start out producing realistic images. It has to be trained. The training process for a generative model is very
-different from the training process for a supervised learning model. For a supervised learning model, we show the model
-an image of an object and we tell it, this is the label. For a generative model, there is no output to associate with each
-image. We just show the model a lot of images and ask it to make more images that come from the same probability
-distribution.
+The goal is for these images to be as fair samples from the distribution over real data. Of course, the generator net doesn’t start out producing realistic images. It has to be trained. The training process for a generative model is very different from the training process for a supervised learning model. For a supervised learning model, we show the model an image of an object and we tell it, this is the label. For a generative model, there is no output to associate with each image. We just show the model a lot of images and ask it to make more images that come from the same probability distribution.
 
 <figure>
   <img src="fig1.png">
-  <figcaption>Scheme representing the general structure of a GAN,
-using MNIST images as data. The latent sample is a random vector
-the generator uses to construct its fake images. As the generator
-learns through training, it figures out how to map these random
-vectors to recognizable images that can fool the discriminator. The
-output of the discriminator is a sigmoid function, where 0 indicates
-a fake image and 1 indicates a real image.</figcaption>
+  <figcaption>Scheme representing the general structure of a GAN, using MNIST images as data. The latent sample is a random vector the generator uses to construct its fake images. As the generator learns through training, it figures out how to map these random vectors to recognizable images that can fool the discriminator. The output of the discriminator is a sigmoid function, where 0 indicates a fake image and 1 indicates a real image.
+  </figcaption>
 </figure>
 
 
-
+But how we actually get the model to do that? Most generative models are trained by adjusting the parameters to maximize the probability that the generator net will generate the training data set. Unfortunately for a lot of interesting models, it can be very difficult to compute this probability. Most generative models get around that with some kind of approximation. GANs use an approximation where a second network, called the discriminator D, learns to guide the generator. The discriminator is just a regular neural net classifier. During the training process, the discriminator is shown real images from the training data half the time and fake images from the generator the other half of the time. The discriminator is trained to output the probability that
+the input is real. So it tries to assign a probability near 1 to real images, and a probability near zero to fake images (see Fig. 1). Meanwhile, the generator tries to do the opposite. It is trained to try to output images that the discriminator will assign probability near one of being real. Over time, the generator is forced to produce more realistic output in order to fool the discriminator. The generator takes random noise values z and maps them to output values x. Wherever the generator maps more values of z, the probability distribution over x, represented by the model, becomes denser. The discriminator outputs high values wherever the density of real data is greater than the density of generated data. The generator changes the samples it produces to move uphill along the function learned by the discriminator (see Algorithm 1). In other words, the generator moves its samples into areas where the model distribution is not yet dense enough. Eventually, the generator’s distribution matches the real distribution, and the discriminator has to output a probability of one half everywhere because every point is equally likely to be generated by the real data set as to be generated by the model. The two densities are equal.
 
 
 
