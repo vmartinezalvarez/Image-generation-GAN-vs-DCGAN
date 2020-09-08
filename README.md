@@ -2,12 +2,7 @@
 ![Center Image](gan.webp)
 
 
-TensorFlow implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] and [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html) datasets.
-
-## notMNIST dataset
-The [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html) dataset is similar to MNIST, but looks a bit more like real data, that is, the data is much less clean compared to MNIST. There are 10 classes, with letters A-J taken from different fonts. 
-
-The dataset consists of a small part cleaned by hand, approximately 1872 elements per class, and large uncleaned part, approximately 52909 elements per class. Two parts have approximately 0.5% and 6.5% label error rate.
+TensorFlow implementation of Generative Adversarial Networks (GAN) [1] and Deep Convolutional Generative Adversarial Networks (DCGAN) [2] for MNIST [3] and notMNIST datasets.
 
 ## Abstract
 
@@ -42,6 +37,9 @@ the input is real. So it tries to assign a probability near 1 to real images, an
 
 Motivated by the ability of GANs to sampling from a latent space of images to create entirely new images, here we evaluate and compare the performance of a GAN, where both generator G and discriminator D are multilayer perceptrons (MLP) with a deep convolutional generative adversarial network (DCGAN) (Radford et al., 2015). The experiments are performed on the MNIST dataset (Lecun et al., 1998), consisting of about 60.000 black and white images of handwritten digits, each with size 28 × 28 pixels. This dataset will be preprocessed according to some useful tricks proven to be useful for training GANs. The detailed descriptions about the model architectures and selected hyperparameters can be found in the colab notebook accompanying this project.
 
+## notMNIST dataset
+Also, we used the [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html) dataset, which is similar to MNIST, but looks a bit more like real data, that is, the data is much less clean compared to MNIST. There are 10 classes, with letters A-J taken from different fonts. This dataset consists of a small part cleaned by hand, approximately 1872 elements per class, and large uncleaned part, approximately 52909 elements per class. Two parts have approximately 0.5% and 6.5% label error rate.
+
 ## Results
 
 <table align='center'>
@@ -72,7 +70,17 @@ Motivated by the ability of GANs to sampling from a latent space of images to cr
 * Learning time
     * MNIST GAN - Avg. time for epoch  is 4.564566612243652 sec
     * MNIST DCGAN - Avg. time for epoch is 26.319965600967407 sec
-    
+ 
+ ##
+ 
+<table align='center'>
+<tr align='center'>
+</tr>
+<tr>
+<td><img src = 'NotMNIST.png'>
+</tr>
+</table>
+
 ## Conclusions
 
 In this short project, we have implemented, evaluated, and compared the performance of a GAN, where both generator and discriminator are multilayer perceptrons with a DCGAN. The images generated using the DCGAN model architecture were significantly better (less noisy) than the ones generates using the multilayer perceptron GAN (see Fig. 2). This can be understood as follows: convolutional neural nets, in general, find areas of correlation within an
