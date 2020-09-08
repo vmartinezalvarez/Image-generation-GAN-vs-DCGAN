@@ -31,6 +31,8 @@ an image of an object and we tell it, this is the label. For a generative model,
 image. We just show the model a lot of images and ask it to make more images that come from the same probability
 distribution.
 
+![Center Image](images/fig1.png)
+
 <table align='center'>
 <tr align='center'>
 <td> GAN</td>
@@ -49,22 +51,7 @@ output of the discriminator is a sigmoid function, where 0 indicates
 a fake image and 1 indicates a real image.
 
 
-## _includes/image.html
-<div class="image-wrapper" >
-  {% if include.url %}
-  <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
-  {% endif %}
-      <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/>
-  {% if include.url %}
-  </a>
-  {% endif %}
-  {% if include.caption %}
-      <p class="image-caption">{{ include.caption }}</p>
-  {% endif %}
-</div>
 
-## Include the image in your post and specify a caption with this tag
-{% include image.html img="assets/images/image_file" title="" caption="" %}
 
 ## Results
 
