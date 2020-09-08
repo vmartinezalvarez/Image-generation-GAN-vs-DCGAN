@@ -75,7 +75,6 @@ Also, we used the [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dat
  
 ![image](https://drive.google.com/uc?export=view&id=1QkL7ZdPe_hwyrV4pLZE1mGhW3Kxb-8Oz)
 
-
 ## Conclusions
 
 In this short project, we have implemented, evaluated, and compared the performance of a GAN, where both generator and discriminator are multilayer perceptrons with a DCGAN. The images generated using the DCGAN model architecture were significantly better (less noisy) than the ones generates using the multilayer perceptron GAN (see Fig. 2). This can be understood as follows: convolutional neural nets, in general, find areas of correlation within an
