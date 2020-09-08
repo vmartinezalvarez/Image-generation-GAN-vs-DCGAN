@@ -1,4 +1,4 @@
-![Center Image](gan.jpg)
+![Center Image](gan.webp)
 
 
 # MNIST Image Generation:  GAN vs DCGAN
