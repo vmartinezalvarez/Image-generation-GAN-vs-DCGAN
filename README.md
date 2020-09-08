@@ -71,11 +71,11 @@ Also, we used the [notMNIST](http://yaroslavvb.blogspot.com/2011/09/notmnist-dat
     * MNIST GAN - Avg. time for epoch  is 4.564566612243652 sec
     * MNIST DCGAN - Avg. time for epoch is 26.319965600967407 sec
  
- ##
+ ## NotMNIST
  
 <table align='center'>
 <tr align='center'>
-<td> GAN</td>
+<td> DCGAN</td>
 </tr>
 <tr>
 <td><img src = 'NotMNIST.gif.png'>
