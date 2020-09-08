@@ -1,4 +1,4 @@
-![Center Image](images/fig1.jpg)
+![Center Image](gan.jpg)
 
 
 # MNIST Image Generation:  GAN vs DCGAN
