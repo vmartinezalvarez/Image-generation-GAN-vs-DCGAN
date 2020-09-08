@@ -34,6 +34,9 @@ the input is real. So it tries to assign a probability near 1 to real images, an
 
 ![Center Image](algo.png)
 
+## Model architecture & Experiment
+
+Motivated by the ability of GANs to sampling from a latent space of images to create entirely new images, here we evaluate and compare the performance of a GAN, where both generator G and discriminator D are multilayer perceptrons (MLP) with a deep convolutional generative adversarial network (DCGAN) (Radford et al., 2015). The experiments are performed on the MNIST dataset (Lecun et al., 1998), consisting of about 60.000 black and white images of handwritten digits, each with size 28 × 28 pixels. This dataset will be preprocessed according to some useful tricks proven to be useful for training GANs. The detailed descriptions about the model architectures and selected hyperparameters can be found in the colab notebook accompanying this project.
 
 ## Results
 
@@ -65,7 +68,11 @@ the input is real. So it tries to assign a probability near 1 to real images, an
 * Learning time
     * MNIST GAN - Avg. time for epoch  is 4.564566612243652 sec
     * MNIST DCGAN - Avg. time for epoch is 26.319965600967407 sec
+    
+## Conclusions
 
+In this short project, we have implemented, evaluated, and compared the performance of a GAN, where both generator and discriminator are multilayer perceptrons with a DCGAN. The images generated using the DCGAN model architecture were significantly better (less noisy) than the ones generates using the multilayer perceptron GAN (see Fig. 2). This can be understood as follows: convolutional neural nets, in general, find areas of correlation within an
+image, that is, they look for spatial correlations. This means a DCGAN would likely be more fitting for image/video data, whereas the general idea of a GAN can be applied to wider domains, as the model specifics are left open to be addresses by individual model architectures. Therefore, of the two model architectures studied here, the DCGAN model is the most appropriate tool to generate images with high resolution and with less noise.
 
 ## Reference
 
