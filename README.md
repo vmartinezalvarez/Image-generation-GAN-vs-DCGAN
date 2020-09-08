@@ -31,7 +31,7 @@ an image of an object and we tell it, this is the label. For a generative model,
 image. We just show the model a lot of images and ask it to make more images that come from the same probability
 distribution.
 
-![Center Image](images/fig1.png)
+![Center Image](fig1.png)
 
 <table align='center'>
 <tr align='center'>
